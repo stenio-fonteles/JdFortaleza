@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá mundo</title>
+</head>
+<input id="numberOne"/>
+<input id="numberTwo"/>
+<button id="calc"> </button>
+<body>
+    <script>
+        const numberOne = document.getElementById("numberOne") ;
+        const numberTwo = document.getElementById("numberTwo");
+        const calc = document.getElementById('calc');
+
+        calc.addEventListener("click" , () =>{
+            soma = Number(numberOne.value) + Number(numberTwo.value)
+            document.write(`a soma de seus numer é igual a: ${soma}  `)
+            document.write('</br>')
+
+            document.write(`com seu antecessor sendo ${soma - 1}`)
+            document.write('</br>')
+            document.write(`e seu sucessor sendo ${soma + 1}`)
+            document.write('</br>')
+            document.write('</br>')
+            document.write('</br>')
+            document.write('</br>')
+
+            document.write('</br>')
+            document.write("nos informe quanto ganha por hora")
+            const inputMoney = document.createElement("input");
+            document.write('</br>')
+
+
+            document.write('</br>')
+            document.write("nos informe por quantas horas")
+            const inputTime = document.createElement("input");
+            document.write('</br>')
+            const button = document.createElement("button");
+
+            button.onclick = () => {
+                const salary = inputTime.value * inputMoney.value;
+                document.write(`voce ganha por mes R$${salary}`)
+            }
+
+
+
+            document.body.append(inputMoney,inputTime,button);
+
+
+        })
+
+
+        document.write("olá mundo")
+    </script>
+</body>
+</html>
